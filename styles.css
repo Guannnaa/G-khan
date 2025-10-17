@@ -1,0 +1,116 @@
+:root {
+  --muted:#ccc;
+}
+
+*{box-sizing:border-box}
+
+body {
+  margin:0;
+  font-family:Inter, system-ui, Arial, sans-serif;
+  color:#fff;
+}
+
+/* === Arka planlar + zoom animasyon === */
+body.home {
+  background:url("images/giris.jpg") no-repeat center center fixed;
+  background-size:cover;
+  animation:zoomBg 10s ease-in-out infinite alternate;
+}
+
+body.tech {
+  background:url("images/teknolojiler.jpg") no-repeat center center fixed;
+  background-size:cover;
+  animation:zoomBg 25s ease-in-out infinite alternate;
+}
+
+body.proj {
+  background:url("images/cars.jpg") no-repeat center center fixed;
+  background-size:cover;
+  animation:zoomBg 25s ease-in-out infinite alternate;
+}
+
+@keyframes zoomBg {
+  0%   { background-size:100% 100%; }
+  50%  { background-size:110% 110%; }
+  100% { background-size:100% 100%; }
+}
+
+/* === Ortak tasarım === */
+.site-header{
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:20px;
+  text-align:center;
+}
+
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 10px;
+  padding:6px 10px;
+  border-radius:6px;
+}
+.nav a.active{background:rgba(255,255,255,0.2)}
+
+.title-anim{
+  font-size:28px;
+  margin:0;
+  animation:pop 1s ease-out;
+}
+@keyframes pop{
+  0%{transform:translateY(-20px);opacity:0}
+  100%{transform:none;opacity:1}
+}
+
+.container{
+  max-width:1000px;
+  margin:24px auto;
+  padding:0 16px;
+}
+
+.card{
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.5);
+  margin-bottom:18px;
+}
+
+.map-canvas{width:100%;height:360px;border-radius:8px;overflow:hidden}
+
+.info-table, .tech-table{width:100%;border-collapse:collapse}
+.info-table th, .info-table td, .tech-table th, .tech-table td{
+  border:1px solid rgba(255,255,255,0.3);
+  padding:8px;
+}
+.info-table img, .tech-table img{display:block}
+
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px;
+}
+.skill{padding:12px;border-radius:8px;background:rgba(255,255,255,0.1)}
+.pulse{animation:glow 1.5s infinite}
+@keyframes glow{
+  0%,100%{text-shadow:0 0 0 rgba(255,255,255,0)}
+  50%{text-shadow:0 0 12px rgba(255,255,255,0.8)}
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;
+}
+.proj img{width:100%;border-radius:8px}
+.proj{padding:8px}
+
+.site-footer{text-align:center;padding:14px;color:var(--muted);font-size:14px}
+.tech-table img {
+  display:block;
+  margin:auto;
+  border-radius:4px;
+  background:rgba(255,255,255,0.1);
+  padding:3px;
+}

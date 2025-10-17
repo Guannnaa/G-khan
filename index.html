@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Engin Gökhan Sefer — Kişisel Sayfa</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+</head>
+<body class="home">
+  <header class="site-header">
+    <h1 class="title-anim">Engin Gökhan Sefer</h1>
+    <p class="subtitle">Harita Mühendisliği 4. sınıf — Hacettepe Üniversitesi (Geomatik Mühendisliği)</p>
+    <nav class="nav">
+      <a href="index.html" class="active">Anasayfa</a>
+      <a href="technologies.html">Teknolojiler</a>
+      <a href="projects.html">Projeler</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="about card">
+      <h2>Hakkımda</h2>
+      <p>Ad: <strong>Engin Gökhan Sefer</strong><br>
+         Eğitim: Hacettepe Üniversitesi — Geomatik Mühendisliği<br>
+         İlk/ortaokul: Faikerbağ İlköğretim Okulu<br>
+         Lise: Sınav Koleji<br>
+         Diller: İngilizce (orta), Almanca (orta)</p>
+    </section>
+
+    <section class="map card">
+      <h2>Hacettepe Üniversitesi (OpenLayers örneği)</h2>
+      <div id="map" class="map-canvas"></div>
+      <p class="map-note">Harita Beytepe kampüsü merkezine odaklanmıştır (lat: 39.867222, lon: 32.734444).</p>
+    </section>
+
+    <section class="contact card">
+      <h2>İletişim</h2>
+      <table class="info-table">
+        <tr>
+          <th>Öğe</th>
+          <th>Detay</th>
+          <th>Görsel</th>
+        </tr>
+        <tr>
+          <td>Bölüm</td>
+          <td>Geomatik / Harita Mühendisliği</td>
+          <td><img src="https://via.placeholder.com/80x50?text=Hacettepe" alt="Hacettepe"></td>
+        </tr>
+        <tr>
+          <td>Lise</td>
+          <td>Sınav Koleji</td>
+          <td><img src="https://via.placeholder.com/80x50?text=S%C4%B1nav" alt="Sınav Koleji"></td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Ödev: GMT458 – Web GIS • Hazırlayan: Engin Gökhan Sefer</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
+
