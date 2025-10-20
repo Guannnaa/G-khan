@@ -26,11 +26,6 @@ window.addEventListener('load', function(){
 
   const markerLayer = new ol.layer.Vector({ source: vectorSource, style: markerStyle });
   map.addLayer(markerLayer);
-
-  map.on('singleclick', function(evt){
-    map.forEachFeatureAtPixel(evt.pixel, function(feat){
-      if(feat) alert(feat.get('name') || 'Konum');
-    });
-  });
 });
+
 
