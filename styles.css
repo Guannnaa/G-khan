@@ -151,4 +151,25 @@ body.proj {
 .tech-table img:hover {
   transform: scale(1.2);
 }
+/* === Proje görselleri düzenleme === */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.proj img {
+  width: 80%;
+  max-height: 160px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.proj img:hover {
+  transform: scale(1.05);
+}
 
