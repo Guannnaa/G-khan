@@ -10,7 +10,7 @@ body {
   color:#fff;
 }
 
-/* === Arka planlar + zoom animasyon === */
+/* === Backgrounds + Zoom Animation === */
 body.home {
   background:url("giris.jpg") no-repeat center center fixed;
   background-size:cover;
@@ -35,7 +35,7 @@ body.proj {
   100% { background-size:100% 100%; }
 }
 
-/* === Ortak Tasarım === */
+/* === Common Layout === */
 .site-header {
   background:rgba(0,0,0,0.6);
   color:#fff;
@@ -113,7 +113,8 @@ body.proj {
   color:var(--muted);
   font-size:14px;
 }
-/* === Teknoloji Tablosu Düzeltme === */
+
+/* === Technology Table === */
 .tech-table {
   width: 100%;
   border-collapse: collapse;
@@ -151,7 +152,8 @@ body.proj {
 .tech-table img:hover {
   transform: scale(1.2);
 }
-/* === Proje görselleri düzenleme === */
+
+/* === Project Image Adjustments === */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -172,4 +174,28 @@ body.proj {
 .proj img:hover {
   transform: scale(1.05);
 }
+
+/* === Profile Photo (About Section) === */
+.about-header {
+  display: flex;
+  align-items: flex-start; /* aligns photo slightly lower */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 140px;         /* 🔼 bigger photo */
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 25px;    /* spacing from text */
+  margin-top: 20px;     /* slightly lower position */
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
 
