@@ -1,8 +1,7 @@
-// scripts.js — OpenLayers harita örneği (Hacettepe Üniversitesi pinli)
 window.addEventListener('load', function() {
-  // 🗺️ Koordinatlar (Hacettepe Üniversitesi Beytepe Kampüsü)
-  const lon = 32.734444;
-  const lat = 39.867222;
+  // 🗺️ Koordinatlar (Güdül, Ankara)
+  const lon = 32.2456;
+  const lat = 40.2106;
   const target = ol.proj.fromLonLat([lon, lat]);
 
   // 🌍 Harita oluştur
@@ -15,29 +14,28 @@ window.addEventListener('load', function() {
     ],
     view: new ol.View({
       center: target,
-      zoom: 15
+      zoom: 13
     })
   });
 
-  // 📍 Hacettepe pin (işaretleyici)
-  const hacettepeMarker = new ol.Feature({
+  // 📍 Güdül pin (işaretleyici)
+  const gudulMarker = new ol.Feature({
     geometry: new ol.geom.Point(target),
-    name: 'Hacettepe Üniversitesi - Beytepe Kampüsü'
+    name: 'Güdül, Ankara'
   });
 
-  
-  const hacettepeStyle = new ol.style.Style({
+  const gudulStyle = new ol.style.Style({
     image: new ol.style.Icon({
       anchor: [0.5, 1],
       src: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
       scale: 0.07
     })
   });
-  hacettepeMarker.setStyle(hacettepeStyle);
+  gudulMarker.setStyle(gudulStyle);
 
   // 📦 Katman ve kaynak ekle
   const vectorSource = new ol.source.Vector({
-    features: [hacettepeMarker]
+    features: [gudulMarker]
   });
   const markerLayer = new ol.layer.Vector({
     source: vectorSource
@@ -53,6 +51,8 @@ window.addEventListener('load', function() {
     });
   });
 });
+
+
 
 
 
